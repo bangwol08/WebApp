@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+      Kakao.init('ebc64306abb92c54a453f21d1cf0330b');
+      Kakao.Auth.createLoginButton({
+        container: '#custom-login-btn',
+        success: function(authObj) {
+          alert(JSON.stringify(authObj));
+        },
+        fail: function(err) {
+          alert(JSON.stringify(err));
+        }
+      });
+    </script>
+</head>
+<body>
+    <button id="custom-login-btn">로그인버튼</button>
+
+</body>
+
+</html>
